@@ -1,26 +1,32 @@
 * {
-    box-sizing: border-box ;
-    margin: 0;
+  box-sizing: border-box ;
+  margin: 0;
 }
 
 body {
-    text-align: center;
+  text-align: center;
 }
 
 .carrossel-cats{
-    box-shadow: 2px 2px 4px black;
-    overflow: hidden;
-    height: 500px;
-    width:auto;
-}
-.container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+  height: 500px;
+  width:auto;
 }
 
-img{
-    object-fit: cover;
-    height: 500px;
-    width: 500px;
+.carrossel-cats-content {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+img {
+  object-fit: cover;
+  width: 500px;
 }
