@@ -1,18 +1,33 @@
-const carousel = document.querySelector('[data-js="carousel-cats"]');
-const images = document.querySelectorAll('[data-js="carousel-cats-item"]');
+const carouselCats = document.querySelector('[data-js="carousel-cats"]');
+const catsImages = document.querySelectorAll('[data-js="carousel-cats-item"]');
 
 let position = 0;
 
-function carrossel() {
-  if (position >= images.length - 1) {
+function carrosselCats() {
+  if (position >= catsImages.length - 1) {
     position = 0;
   } else {
     position++;
   }
-  carousel.style.transform = `translateX(-${position * 500}px)`;
+  carouselCats.style.transform = `translateX(-${position * 500}px)`;
 }
 
-setInterval(carrossel, 1800)
+setInterval(carrosselCats, 1800);
+
+const peixesContainer = document.querySelector('[data-js="carousel-fishes"]');
+const fishesImages = document.querySelectorAll('[data-js="carousel-peixes-item"]');
+const prevButton = document.querySelector('[data-js="seta-prev"]');
+const nextButton = document.querySelector('[data-js="seta-next"]');
+
+nextButton.addEventListener("click", () => {
+  const slideWidth = fishesImages.clientWidth;
+  peixesContainer.scrollLeft += slideWidth;
+});
+
+prevButton.addEventListener("click", () => {
+  const slideWidth = fishesImages.clientWidth;
+  peixesContainer.scrollLeft -= slideWidth;
+});
 
 /*
 Como as imagens têm tamanhos variados, não estou 
