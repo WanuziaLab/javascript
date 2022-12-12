@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box ;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+}
+
+.carrossel-cats{
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+  height: 500px;
+  width:auto;
+}
+
+.carrossel-cats-content {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+}
+
+img {
+  object-fit: cover;
+  width: 500px;
+}
